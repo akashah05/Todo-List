@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+/* Header Section */
+header {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  padding: 0.2rem 0;
+  justify-content: space-between;
+}
+
+.header-btns {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.604);
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+}
+
+.header-btns:hover {
+  color: black;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.headerbtn-line {
+  color: black;
+  font-weight: 700;
+  border-bottom: 0.2rem solid black;
+}
+
+/* Top Preview Section */
+.toppreview-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+
+  p {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.501);
+    letter-spacing: 2px;
+  }
+}
+
+.newtask-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background: none;
+  border: none;
+  color: blue;
+  transition: all 0.2s ease;
+}
+
+.newtask-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* todos section */
+.todos-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
+    color: rgba(0, 0, 0, 0.61);
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: black;
+  }
+
+  .active-btn {
+    color: blue;
+    font-weight: 600;
+  }
+}
+
+/* form container */
+.form-container {
+  display: none;
+  margin: auto;
+  width: 70%;
+  box-shadow: 0rem 0.3rem 0.8rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.forminputs-container {
+  display: flex;
+  column-gap: 0.5rem;
+
+  #title,
+  #description {
+    padding: 0.4rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 0.1rem solid black;
+    border-top: 0.1rem solid black;
+    outline: none;
+    flex: 1;
+  }
+}
+
+/* prioritybtns-container */
+.prioritybtns-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 4rem;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  padding-block: 0.5rem;
+
+  button {
+    padding: 0.2rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 0.2rem;
+    color: wheat;
+    font-weight: 500;
+  }
+
+  .low-priority {
+    background-color: #4caf50;
+  }
+
+  .medium-priority {
+    background-color: #ffa500;
+  }
+
+  .high-priority {
+    background-color: #ff7f7f;
+  }
+
+  .current-priority {
+    outline: 1px solid black;
+  }
+}
+
+.duedate {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  border-bottom: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  padding-block: 0.5rem;
+}
+
+.formmainbtns-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+  border-bottom: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  padding-block: 0.5rem;
+
+  button {
+    padding: 0.2rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+    font-weight: 500;
+  }
+
+  .reset-btn {
+    background-color: #ffa500;
+  }
+
+  .cancel-btn {
+    background-color: #ff7f7f;
+  }
+
+  .add-btn {
+    background-color: #4caf50;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* media queries for responsiveness */
+@media only screen and (max-width: 500px) {
+
+  header,.toppreview-container {
+    width: 80%;
+  }
+
+  .header-btns {
+    font-size: 1rem;
+  }
+
+  .toppreview-container p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .newtask-btn {
+    height: fit-content;
+    align-self: center;
+    column-gap: 0.1rem;
+  }
+
+  .options-container {
+    button {
+        font-size: 1rem;
+    }
+  }
+
+  .forminputs-container {
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%  ;
+  }
+
+  .forminputs-container {
+    column-gap: 0.3rem;
+  }
+
+  .prioritybtns-container {
+    column-gap: 2rem;
+  }
+
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo | List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="taskbox.css" />
+    <!-- <script type="module" src="script.js"></script> -->
+    <script src="index.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <p class="header-btns custom-btn">Custom</p>
+      <p class="today-task header-btns headerbtn-line">Today's Tasks</p>
+      <p class="header-btns pending-task">Pending</p>
+    </header>
+
+    <main>
+      <div class="toppreview-container">
+        <div class="previewtext-container">
+          <h1>Today's Task</h1>
+          <p>Wednesday, 2 March</p>
+        </div>
+        <button type="button" class="newtask-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#0000F5"
+          >
+            <path
+              d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+            /></svg
+          >New Task
+        </button>
+      </div>
+
+      <div class="form-container">
+        <form>
+          <div class="forminputs-container">
+            <input type="text" id="title" placeholder="Gym" required />
+            <input
+              type="text"
+              id="description"
+              placeholder="Lifting 5 Kg"
+              required
+            />
+          </div>
+          <div class="prioritybtns-container">
+            <button type="button" class="low-priority priority-btn">Low</button>
+            <button
+              type="button"
+              class="medium-priority priority-btn current-priority"
+            >Medium</button>
+            <button type="button" class="high-priority priority-btn">High</button>
+</div>
+          <div class="duedate">
+            <div>
+              <label for="duedate">DueDate</label>
+              <input type="date" id="duedate" />
+            </div>
+
+            <div>
+              <label for="category">Category</label>
+              <select id="category">
+                <option value="personal">Personal</option>
+                <option value="work" selected>Work</option>
+                <option value="shopping">Shopping</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formmainbtns-container">
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="add-btn">Add</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="todos-container">
+        <div class="options-container">
+          <button class="options-btns active-btn" value="all">All</button>
+          <button class="options-btns" value="personal">Personal</button>
+          <button class="options-btns" value="work">Work</button>
+          <button class="options-btns" value="shopping">Shopping</button>
+        </div>
+
+        <ul></ul>
+      </div>
+    </main>
+  </body>
+</html>
